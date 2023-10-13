@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/biamavang?useSSL=false
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update # Cấu hình Hibernate tự động tạo bảng (update) hoặc không làm gì (none)
+    show-sql: true # Hiển thị các truy vấn SQL trong log
+
+server:
+  port: 8080 # Cổng mà ứng dụng Spring Boot sẽ chạy
+
+# Các cấu hình khác cho ứng dụng của bạn có thể thêm ở đây
