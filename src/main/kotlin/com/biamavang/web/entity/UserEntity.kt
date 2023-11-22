@@ -3,13 +3,16 @@ package com.biamavang.web.entity
 import javax.persistence.*
 
 @Entity
-@Table(name = "GOLD_COVER")
-class GoldCover (
+@Table(name = "USER")
+data class UserEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     val id: Long,
 
-    @Column(name = "Image")
-    val image: String,
+    val username: String,
 
+    val password: String,
+
+    @OneToOne
+    val customer: CustomerEntity
 )
